@@ -40,46 +40,78 @@
 // 78 -> 2
 // 89126 -> 5
 
-int QuantityNum(int numbers)
-{
-    int result = 0;
-    if (numbers == 0)
-        result = 1;
-    else
-    {
-        while (numbers != 0)
-        {
-            numbers /= 10;
-            result++;
-        }
-    }
-    return result;
-}
-
-// void QuantityNum2(int numbers)
+// int QuantityNum(int numbers)
 // {
-//     int check = 0;
+//     int result = 0;
 //     if (numbers == 0)
-//     {
-//         check++;
-//         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
-//     }
-//     else 
+//         result = 1;
+//     else
 //     {
 //         while (numbers != 0)
 //         {
 //             numbers /= 10;
-//             check++;
+//             result++;
 //         }
-//         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
 //     }
+//     return result;
 // }
 
-System.Console.WriteLine("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($"В вышем числе: {num} состовляет {QuantityNum(num)} цифр");
-// QuantityNum2(num);
+// // void QuantityNum2(int numbers)
+// // {
+// //     int check = 0;
+// //     if (numbers == 0)
+// //     {
+// //         check++;
+// //         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+// //     }
+// //     else 
+// //     {
+// //         while (numbers != 0)
+// //         {
+// //             numbers /= 10;
+// //             check++;
+// //         }
+// //         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+// //     }
+// // }
+
+// System.Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine($"В вышем числе: {num} состовляет {QuantityNum(num)} цифр");
+// // QuantityNum2(num);
+
+
+// // ************************************************************************************************
+// // А если вещественное число?
+
+
 
 
 // ************************************************************************************************
-// А если вещественное число?
+// Задача 3: Напишите программу, которая принимает
+// на вход число N и выдаёт произведение чисел от 1 до N. Найти факториал
+// Пример:
+// 4 -> 24
+// 5 -> 120
+int Factorial(int number)
+{
+    int result = 1;
+    for (int i = 1; i <= number; i++)
+        result = i * result;
+    return result;
+}
+
+
+System.Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int result = Factorial(num);
+System.Console.WriteLine(result);
+
+
+
+// ************************************************************************************************
+// Задача 4: Напишите программу, которая выводит
+// массив из 8 элементов, заполненный нулями и единицами
+// в случайном порядке
+// Пример:
+// [1, 0, 1, 1, 0, 1, 0, 0]
