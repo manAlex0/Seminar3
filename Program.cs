@@ -118,17 +118,31 @@
 // Пример:
 // [1, 0, 1, 1, 0, 1, 0, 0]
 
-void RandomArray(int[] mass)
+// void RandomArray(int[] mass)
+// {
+//     int length = mass.Length;
+//     Random namb = new Random();
+//     for (int i = 0; i < length; i++)
+//     {
+//         mass[i] = namb.Next(2);
+//         System.Console.Write($"{mass[i]} ");
+//     }
+// }
+
+
+// int[] array = new int[8];
+// RandomArray(array);
+
+int[] FillArray()
 {
-    int length = mass.Length;
-    Random namb = new Random();
-    for (int i = 0; i < length; i++)
+    int[] array = new int[8];
+    Random random = new Random();
+    for (int i = 0; i < 8; i++)
     {
-        mass[i] = namb.Next(2);
-        System.Console.Write($"{mass[i]} ");
+        array[i] = random.Next(2);
     }
+    return array;
 }
 
-
-int[] array = new int[8];
-RandomArray(array);
+int[] array = FillArray();
+System.Console.WriteLine(string.Join(", ", array));
