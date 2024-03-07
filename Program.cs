@@ -93,19 +93,21 @@
 // Пример:
 // 4 -> 24
 // 5 -> 120
-int Factorial(int number)
-{
-    int result = 1;
-    for (int i = 1; i <= number; i++)
-        result = i * result;
-    return result;
-}
+
+// int Factorial(int number)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= number; i++)
+//         result = i * result;
+//     return result;
+// }
 
 
-System.Console.WriteLine("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int result = Factorial(num);
-System.Console.WriteLine(result);
+// System.Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int result = Factorial(num);
+// System.Console.WriteLine(result);
+
 
 
 
@@ -115,3 +117,18 @@ System.Console.WriteLine(result);
 // в случайном порядке
 // Пример:
 // [1, 0, 1, 1, 0, 1, 0, 0]
+
+void RandomArray(int[] mass)
+{
+    int length = mass.Length;
+    Random namb = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        mass[i] = namb.Next(2);
+        System.Console.Write($"{mass[i]} ");
+    }
+}
+
+
+int[] array = new int[8];
+RandomArray(array);
