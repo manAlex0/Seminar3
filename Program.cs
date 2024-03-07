@@ -7,25 +7,25 @@
 // 4 -> 10
 // 8 -> 36
 
-// int Summa(int num)
+int Summa(int num)
+{
+    int result = 0;
+    for (int i = 1; i <= num; i++)
+        result += i;
+    return result;
+}
+
+// void Summa2(int num)
 // {
 //     int result = 0;
 //     for (int i = 1; i <= num; i++)
 //         result += i;
-//     return result;
+//     System.Console.WriteLine($"Вы ввели: {num}, сумма всех чисел равна: {result}");
 // }
 
-// // void Summa2(int num)
-// // {
-// //     int result = 0;
-// //     for (int i = 1; i <= num; i++)
-// //         result += i;
-// //     System.Console.WriteLine($"Вы ввели: {num}, сумма всех чисел равна: {result}");
-// // }
 
-
-// System.Console.WriteLine("Введите число: ");
-// int num = int.Parse(Console.ReadLine()!);
-// int result = Summa(num);
-// System.Console.WriteLine($"Вы ввели: {num}, сумма всех чисел равна: {result}");
-// // Summa2(num);
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+int result = Summa(num);
+System.Console.WriteLine($"Вы ввели: {num}, сумма всех чисел равна: {result}");
+// Summa2(num);
