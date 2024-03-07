@@ -53,14 +53,12 @@ int QuantityNum(int numbers)
     }
     else if (numbers == 0)
         result = 1;
-    else if (numbers < 0)
-    {
+    else
         while (numbers < 0)
         {
             numbers /= 10;
             result++;
         }
-    }
     return result;
 }
 
