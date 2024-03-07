@@ -40,29 +40,59 @@
 // 78 -> 2
 // 89126 -> 5
 
-// int QuantityNum(int numbers)
-// {
-//     int result = 0;
-//     while (numbers > 0)
-//     {
-//         numbers /= 10;
-//         result++;
-//     }
-//     return result;
-// }
-
-void QuantityNum2(int numbers)
+int QuantityNum(int numbers)
 {
-    int check = 0;
-    while (numbers > 0)
+    int result = 0;
+    if (numbers > 0)
+    {
+        while (numbers > 0)
         {
-        numbers /= 10;
-        check++;
+            numbers /= 10;
+            result++;
         }
-    System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+    }
+    else if (numbers == 0)
+        result = 1;
+    else if (numbers < 0)
+    {
+        while (numbers < 0)
+        {
+            numbers /= 10;
+            result++;
+        }
+    }
+    return result;
 }
+
+// void QuantityNum2(int numbers)
+// {
+//     int check = 0;
+//     if (numbers > 0)
+//     {
+//         while (numbers > 0)
+//         {
+//             numbers /= 10;
+//             check++;
+//         }
+//         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+//     }
+//     else if (numbers == 0)
+//     {
+//         check++;
+//         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+//     }
+//     else if (numbers < 0)
+//     {
+//         while (numbers < 0)
+//         {
+//             numbers /= 10;
+//             check++;
+//         }
+//         System.Console.WriteLine($"В вышем числе состовляет {check} цифр");
+//     }
+// }
 
 System.Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine($"В вышем числе: {num} состовляет {QuantityNum(num)} цифр");
-QuantityNum2(num);
+System.Console.WriteLine($"В вышем числе: {num} состовляет {QuantityNum(num)} цифр");
+// QuantityNum2(num);
