@@ -155,33 +155,54 @@
 // Пример:
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
-int MathPow(int a, int b)
-{
-    int result = 1;
-    for (int i = 0; i < b; i++)
-    {
-        result *=a;
-    }
-    return result;
-}
+// int MathPow(int a, int b)
+// {
+//     int result = 1;
+//     for (int i = 0; i < b; i++)
+//     {
+//         result *=a;
+//     }
+//     return result;
+// }
 
-System.Console.WriteLine("Введите число: ");
-int firstNumber = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите степень: ");
-int secondNumber = int.Parse(Console.ReadLine()!);
-int result = MathPow(firstNumber, secondNumber);
-System.Console.WriteLine($"Возводим число {firstNumber} в натуральную степень {secondNumber}. Получаем: {result}");
+// System.Console.WriteLine("Введите число: ");
+// int firstNumber = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите степень: ");
+// int secondNumber = int.Parse(Console.ReadLine()!);
+// int result = MathPow(firstNumber, secondNumber);
+// System.Console.WriteLine($"Возводим число {firstNumber} в натуральную степень {secondNumber}. Получаем: {result}");
 
 
+
+
+// ************************************************************************************************
 // Задача 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // Пример:
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
 
+int SummNumb(int num)
+{
+    int summ = 0;
+    while (num > 0)
+    {
+        summ = summ + (num%10);
+        num/=10;
+    }
+    return summ;
+}
+
+System.Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine()!);
+int summ = SummNumb(number);
+System.Console.WriteLine(summ);
 
 
 
+
+
+// ************************************************************************************************
 // Задача 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // Пример:
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
@@ -190,6 +211,7 @@ System.Console.WriteLine($"Возводим число {firstNumber} в нату
 
 
 
+// ************************************************************************************************
 // Задача 4: HARD Напишите программу, которая принимает на вход целое или дробное число и выдаёт количество цифр в числе.
 // Пример:
 // 456 -> 3
