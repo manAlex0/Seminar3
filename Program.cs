@@ -182,21 +182,21 @@
 // 82 -> 10
 // 9012 -> 12
 
-int SummNumb(int num)
-{
-    int summ = 0;
-    while (num > 0)
-    {
-        summ = summ + (num % 10);
-        num /= 10;
-    }
-    return summ;
-}
+// int SummNumb(int num)
+// {
+//     int summ = 0;
+//     while (num > 0)
+//     {
+//         summ = summ + (num % 10);
+//         num /= 10;
+//     }
+//     return summ;
+// }
 
-System.Console.WriteLine("Введите число: ");
-int number = int.Parse(Console.ReadLine()!);
-int summ = SummNumb(number);
-System.Console.WriteLine(summ);
+// System.Console.WriteLine("Введите число: ");
+// int number = int.Parse(Console.ReadLine()!);
+// int summ = SummNumb(number);
+// System.Console.WriteLine(summ);
 
 
 
@@ -208,7 +208,19 @@ System.Console.WriteLine(summ);
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+void RandomArray(int[] mass)
+{
+    int length = mass.Length;
+    Random num = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        mass[i] = num.Next(99);
+        System.Console.Write($"{mass[i]} ");
+    }
+}
 
+int [] array = new int[8];
+RandomArray(array);
 
 
 // ************************************************************************************************
