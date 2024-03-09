@@ -208,19 +208,21 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-void RandomArray(int[] mass)
-{
-    int length = mass.Length;
-    Random num = new Random();
-    for (int i = 0; i < length; i++)
-    {
-        mass[i] = num.Next(99);
-        System.Console.Write($"{mass[i]} ");
-    }
-}
+// void RandomArray(int[] mass)
+// {
+//     int length = mass.Length;
+//     Random num = new Random();
+//     for (int i = 0; i < length; i++)
+//     {
+//         mass[i] = num.Next(99);
+//         System.Console.Write($"{mass[i]} ");
+//     }
+// }
 
-int [] array = new int[8];
-RandomArray(array);
+// int [] array = new int[8];
+// RandomArray(array);
+
+
 
 
 // ************************************************************************************************
@@ -231,3 +233,31 @@ RandomArray(array);
 // 89,126 -> 5
 // 0,001 -> 4
 // 000000 -> 1
+double MathPow(double number)
+{
+    int result = 0;
+    while (number * Math.Pow(10, 1 + result) % 10 != 0)
+    {
+        result++;
+    }
+    return result;
+}
+double MathPow2(double num)
+{
+    int number = Convert.ToInt32(num);
+    int result = 0;
+    if (number == 0) result++;
+    else
+        while (number != 0)
+        {
+            number /= 10;
+            result++;
+        }
+    return result;
+}
+
+
+System.Console.WriteLine("Введите число: ");
+double num = double.Parse(Console.ReadLine()!);
+int result = Convert.ToInt32(MathPow(num) + MathPow2(num));
+System.Console.WriteLine(result);
